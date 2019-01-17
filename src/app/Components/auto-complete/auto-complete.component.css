@@ -15,3 +15,6 @@ input{
 .card-img-left{
     width: 70px;
 }
+mark {
+    padding-left:0em;
+}

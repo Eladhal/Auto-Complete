@@ -9,6 +9,7 @@ import {UserInfo} from '../../Models/userInfo'
 })
 export class AutoCompleteComponent implements OnInit {
 
+  search:string;
   private listOfUsers:UserInfo[];
   constructor(private dbService:DbServiceService) { }
 
@@ -20,8 +21,10 @@ export class AutoCompleteComponent implements OnInit {
       this.listOfUsers=[];
       return;
     }
-    
-    this.listOfUsers= this.dbService.searchUsers(term);
- } 
+    this.search = term; // For Pipe highlight use
 
+    this.dbService.searchUsers(term).subscribe((users)=>{
+      this.listOfUsers= users;
+    })
+ } 
 }

@@ -14,8 +14,8 @@
             <img class ="card-img-left flex-auto d-none d-md-block"
                 [src] ="user.imageUrl">
             <div class="card-body d-flex flex-column align-items-start">
-              <h5>{{user.name}}</h5>
-              <p>{{user.workTitle}}</p>
+              <h5 innerHTML="{{ user.name | highlight : search}}"></h5>
+              <p innerHTML="{{ user.workTitle | highlight : search}}"></p>
             </div>
           </div>
         </div>
