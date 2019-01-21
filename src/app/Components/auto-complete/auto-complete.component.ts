@@ -10,7 +10,7 @@ import {UserInfo} from '../../Models/userInfo'
 export class AutoCompleteComponent implements OnInit {
 
   search:string;
-  private listOfUsers:UserInfo[];
+  listOfUsers:UserInfo[];
   constructor(private dbService:DbServiceService) { }
 
   ngOnInit() {

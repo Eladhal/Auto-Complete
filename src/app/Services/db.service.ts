@@ -12,7 +12,7 @@ export class DbServiceService {
   constructor(private http: HttpClient) { }
 
   searchUsers(term:string) :Observable<UserInfo[]>{
-    return this.http.get<UserInfo[]> ('https://api/Users/search?term='+term);
+    return this.http.get<UserInfo[]> ('https://localhost:44353/users/search?term='+term);
       }
 
 /*       searchUsers(term:string):UserInfo[]{
